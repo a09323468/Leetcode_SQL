@@ -1,0 +1,10 @@
+/* Write your T-SQL query statement below */
+
+--select * from Salary;
+
+UPDATE salary
+set sex = 
+    case sex
+        when 'f' then 'm'
+        else 'f'
+    end;
