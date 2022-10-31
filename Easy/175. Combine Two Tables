@@ -1,8 +1,7 @@
 /* Write your T-SQL query statement below */
 SELECT 
-    product_id  
+    P.firstName , P.lastName , A .city, A.state
 FROM 
-	Products   
-WHERE
-    low_fats = 'Y' AND
-    recyclable = 'Y';
+	PERSON  P  left JOIN Address A 
+		ON P.personId = A .personId
+ORDER BY P.firstName;
