@@ -1,0 +1,18 @@
+/* Write your T-SQL query statement below 
+ name AS n */
+ 
+   SELECT 
+        C.name AS Customers
+    FROM 
+	    Customers AS C 
+        
+    WHERE C.id  NOT IN 
+    (
+        SELECT 
+            O.customerId 
+        FROM 
+            Customers AS C 
+        INNER JOIN  
+            Orders AS O 
+                ON C.id = O.customerId
+    );
